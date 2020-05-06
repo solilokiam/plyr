@@ -3955,7 +3955,8 @@ var defaults$1 = {
     // Hide annotations
     modestbranding: 1 // Hide logos as much as possible (they still show one in the corner when paused)
 
-  }
+  },
+  preload: 'auto'
 };
 
 // ==========================================================================
@@ -7962,6 +7963,10 @@ var source = {
         if (_this2.config.playsinline) {
           _this2.media.setAttribute('playsinline', '');
         }
+
+        if (_this2.config.preload) {
+          _this2.media.setAttribute('preload', _this2.config.preload);
+        }
       } // Restore class hook
 
 
@@ -8221,6 +8226,10 @@ var Plyr = /*#__PURE__*/function () {
 
         if (this.media.hasAttribute('loop')) {
           this.config.loop.active = true;
+        }
+
+        if (this.media.hasAttribute('preload')) {
+          this.config.preload = this.media.getAttribute('preload');
         }
 
         break;

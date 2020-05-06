@@ -437,6 +437,8 @@ const defaults = {
     iv_load_policy: 3, // Hide annotations
     modestbranding: 1, // Hide logos as much as possible (they still show one in the corner when paused)
   },
+
+  preload: 'auto',
 };
 
 export default defaults;
